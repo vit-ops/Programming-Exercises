@@ -61,8 +61,16 @@ int main() {
             printf("Opcao invalida! Escolha entre 1 e 5.\n");
         }
 
-        printf("\nDeseja realizar outra operacao? (s/n): ");
-        scanf(" %c", &continuar);
+        do {
+            printf("\nDeseja realizar outra operacao? (s/n): ");
+            scanf(" %c", &continuar);
+
+            if (continuar != 's' && continuar != 'S' &&
+                continuar != 'n' && continuar != 'N') {
+                printf("Resposta invalida! Digite apenas 's' para sim ou 'n' para nao.\n");
+            }
+        } while (continuar != 's' && continuar != 'S' &&
+                 continuar != 'n' && continuar != 'N');
 
     } while (continuar == 's' || continuar == 'S');
 
