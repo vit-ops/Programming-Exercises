@@ -56,9 +56,10 @@ int main() {
             }
         } else if (opcao == 5) {
             printf("Obrigado por usar a calculadora! Ate a proxima.\n");
-            break;
+            return 0; // encerra imediatamente sem repetir a mensagem
         } else {
             printf("Opcao invalida! Escolha entre 1 e 5.\n");
+            continue; // volta direto ao menu inicial
         }
 
         do {
